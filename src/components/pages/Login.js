@@ -14,7 +14,6 @@ const Login = ({ history }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const {isAuthenticated, setIsAuthenticated} = useContext(Auth);
-  const [path, setPath] = useState("")
   const [alert, setAlert] = useState(false)
 
   
@@ -42,7 +41,7 @@ const Login = ({ history }) => {
 
   return (
     <div className="login-container">
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <video src='assets/videos/video-1.mp4' autoPlay loop muted />
       <form className="form-profile" onSubmit={handleSubmit} >
           <h1>Se connecter</h1>
           <div className="form-group">

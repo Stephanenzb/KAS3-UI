@@ -13,9 +13,7 @@ const Recorder = () =>{
     const [blobURL, setBlobURL] = useState('');
     const [audioFile, setAudioFile] = useState(null);
     const [url, setUrl ] = useState("");
-    const [cloudUrl, setCloudUrl] = useState("")
     const [blob, setBlob] = useState(null);
-    const [openModal, setOpenModal] = useState(false);
     const [transcriptedText, setTranscriptedText] = useState("");
     const [rowData, setRowData] = useState([])
     const [submitted, setSubmitted] = useState(false)
@@ -120,30 +118,18 @@ const Recorder = () =>{
         console.log('recorded Blob is:', recordedBlob);
         let newBlobUrl =  recordedBlob.blobURL;
         setBlobURL(newBlobUrl);
-        //const file = new File([recordedBlob], 'kameliasiaminsomniaque.wav')
         const newBlob = new Blob([recordedBlob['blob']], recordedBlob["options"]);
         setBlob(newBlob);        
         blobCoversion(new Blob([recordedBlob['blob']], { type: "audio/wav" }))
         
         
-        //changer ici et envoyer directement au cloud storage 
-        //renvoyer a l'API pour split et transcrire 
-        //renvoyer la transcription 
-        //la stocket dans ES :) 
-        
     }
 
 
     const storeTranscript = () => {
-        
-        const transcription = {
-            title :"allo", 
-            content : transcriptedText
-        }
-
         const id = Math.floor(Math.random() * 100)
        
-        const response = axios.post(
+        axios.post(
             "https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/store-transcription/bdd_kas_transcript", "bdd_kas_transcript",
               {
                   params: {
@@ -167,7 +153,7 @@ const Recorder = () =>{
 
 
     const transcript = () =>{
-        const response = axios.get(
+        axios.get(
             "https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/transcription", {
                 params : {
                     public_url: url
@@ -182,7 +168,6 @@ const Recorder = () =>{
                         setTranscriptedText("Oups ! Notre IA est entrain de grandir, On pourra te fournir cela dans la prochaine version de KAS !")
                     }
                     
-                    setOpenModal(true)
                 }
             ).catch(err => {
                 console.log(err)
@@ -205,7 +190,6 @@ const Recorder = () =>{
         ).then(
             (res) =>{
                 setRowData(res.data)
-                setOpenModal(true)
             } 
            
         )
@@ -224,7 +208,7 @@ const Recorder = () =>{
     return(
         <>
         <div className="recorder-container">
-            <video src='/videos/video-1.mp4' autoPlay loop muted />
+            <video src='assets/videos/video-1.mp4' autoPlay loop muted />
             <ReactMic
             record={record}
             className="sound-wave"

@@ -9,21 +9,21 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul>
             <CardItem
-              src='images/stephane.jpg'
+              src='assets/images/stephane.jpg'
               text='Data Analyste'
               label='Stephane'
             />
           </ul>
           <ul>
             <CardItem
-              src='images/kamelia.jpg'
+              src='assets/images/kamelia.jpg'
               text='Software Engieneer'
               label='Kamelia'
             />
           </ul>
           <ul>
             <CardItem
-              src='images/cheikh.jpg'
+              src='assets/images/cheikh.jpg'
               text='Data Engieneer'
               label='Cheikh'
             />

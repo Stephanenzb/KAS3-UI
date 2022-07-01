@@ -9,7 +9,6 @@ import Contact from './components/pages/Contact';
 import Profil from './components/pages/Profil'
 import Auth from "./components/contextes/Auth";
 import Dictaphone from './components/Dictaphone';
-import MicRecorderFile from './components/MicRecorderFile';
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import { hasAuthenticated } from './components/services/AuthApi';
 import Recorder from './components/Recorder';

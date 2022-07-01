@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useRef, useEffect} from "react";
+import React, { useState, useEffect} from "react";
 import Footer from "./Footer";
 import { LoginButton } from "./LoginButton";
 import './TranscriptedData.css';
@@ -39,7 +39,7 @@ const TranscriptionData = () =>{
     return(
         <>
         <div className="data-container">
-        <video src='/videos/video-1.mp4' autoPlay loop muted />
+        <video src='/assets/videos/video-1.mp4' autoPlay loop muted />
         <h1>Click ici pour afficher tes transcriptions </h1>
         {showButton &&
         <LoginButton

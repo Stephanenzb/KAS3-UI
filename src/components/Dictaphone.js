@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import SpeechRecognition from "react-speech-recognition/lib/SpeechRecognition";
 import { useSpeechRecognition } from "react-speech-recognition";
 import { LoginButton } from "./LoginButton";
@@ -6,7 +6,6 @@ import "./Dictaphone.css"
 import Footer from "./Footer";
 
 const Dictaphone = () =>{
-    const [message, setMessage] = useState('');
     const commands = [
         {
           command: 'reset',
@@ -48,7 +47,7 @@ const Dictaphone = () =>{
 
     return (
         <div>
-          <video src='/videos/video-1.mp4' autoPlay loop muted />
+          <video src='assets/videos/video-1.mp4' autoPlay loop muted />
         <div className="dict-container">
         <span style={{"color" : "white"}} >
           listening:

@@ -9,7 +9,6 @@ const Register = (props) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [profile, setProfile] = useState("");
   const [path, setPath] = useState("")
   const [alert, setAlert] = useState(false)
   
@@ -17,14 +16,7 @@ const Register = (props) => {
 
   const handleSubmit =  (e) =>{
     e.preventDefault();
-    
-    const user = {
-      index_name : 'database_users',
-      email : email, 
-      username : username,
-      password : password
-    }
-      const response =  axios.post("https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/create-user/database_users/", "databse_users",
+      axios.post("https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/create-user/database_users/", "databse_users",
       {
         params: {
           email : email,
@@ -51,7 +43,7 @@ const Register = (props) => {
 
   return (
     <div className="register-container">
-    <video src='/videos/video-1.mp4' autoPlay loop muted />
+    <video src='assets/videos/video-1.mp4' autoPlay loop muted />
       <form className="form-profile" onSubmit={handleSubmit}>
           <h1>Inscrivez vous dès maintenant</h1>
           <div className="form-group">

@@ -1,10 +1,7 @@
 import React from "react";
 import Footer from "../Footer";
 import './Profil.css'
-import { LoginButton } from "../LoginButton";
 import { Button } from "../Button";
-import Dictaphone from "../Dictaphone";
-import MicRecorderFile from "../MicRecorderFile";
 import "../HeroSection.css"
 
 
@@ -12,7 +9,7 @@ const Profil = () =>{
   return (
     <div>
       <div className="hero-container">
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <video src='assets/videos/video-1.mp4' autoPlay loop muted />
       <h1>Test les deux transcriptions</h1>
       <p>Click sur un des deux modes</p>
           <div className="hero-btns">    
