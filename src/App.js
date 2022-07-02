@@ -13,6 +13,7 @@ import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import { hasAuthenticated } from './components/services/AuthApi';
 import Recorder from './components/Recorder';
 import TranscriptionData from './components/TranscriptionData';
+import Upload from './components/Upload';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='/sign-up' component={Login} />
           <Route path='/register' component={Register}></Route>
           <Route path='/contact' component={Contact}></Route>
+          <AuthenticatedRoute path="/upload" component={Upload}></AuthenticatedRoute>
           <AuthenticatedRoute path='/dictaphone' component={Dictaphone}></AuthenticatedRoute>
           <AuthenticatedRoute path='/recorder' component={Recorder}></AuthenticatedRoute>
           <AuthenticatedRoute path='/TranscriptedAudio' component={TranscriptionData}></AuthenticatedRoute>

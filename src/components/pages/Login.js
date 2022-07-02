@@ -6,6 +6,7 @@ import {LoginButton} from '../LoginButton'
 import './Login.css'
 import {login} from "../services/AuthApi"
 import Footer from '../Footer';
+import videoSource from '../../assets/videos/video-1.mp4';
 
 
 
@@ -41,7 +42,7 @@ const Login = ({ history }) => {
 
   return (
     <div className="login-container">
-      <video src='assets/videos/video-1.mp4' autoPlay loop muted />
+      <video src={videoSource} autoPlay loop muted />
       <form className="form-profile" onSubmit={handleSubmit} >
           <h1>Se connecter</h1>
           <div className="form-group">

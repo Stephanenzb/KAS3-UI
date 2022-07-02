@@ -1,16 +1,16 @@
 import React from "react";
 import Footer from "../Footer";
 import Cards from "../Cards";
+import videoSource from '../../assets/videos/video-1.mp4';
 
 const Contact = () =>{
     return(
     <div>
     <div className="contact-container">
-       <video src='assets/videos/video-1.mp4' autoPlay loop muted /> 
-       <h1 style={{color: "white", fontSize: "60px"}}>Equipe KAS</h1>
+       <video src={videoSource} autoPlay loop muted /> 
        <Cards/>
+       <Footer/>
     </div>
-    <Footer/>
     </div>    
     
     

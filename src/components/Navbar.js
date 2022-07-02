@@ -58,7 +58,7 @@ function Navbar() {
             <li className='nav-item'>
               {isAuthenticated && 
               <Link to="/TranscriptedAudio" className='nav-links' onClick={closeMobileMenu}>
-              Gallerie
+              Bibliothèque
             </Link>
               }
               {!isAuthenticated &&
@@ -87,7 +87,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline' path="/presentation"> KAS : l'équipe ! <i className='far fa-play-circle' /></Button>}
+          {button && <Button buttonStyle='btn--outline' path="/contact"> KAS : l'équipe ! <i className='far fa-play-circle' /></Button>}
           {isAuthenticated && <LoginButton buttonStyle='btn--outline' buttonSize='btn--large' onClick={handleLogout}>Deconnexion</LoginButton>}
         </div>
       </nav>

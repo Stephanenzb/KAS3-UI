@@ -4,6 +4,7 @@ import { LoginButton } from "../LoginButton";
 import './Register.css';
 import Footer from "../Footer";
 import axios from "axios";
+import videoSource from '../../assets/videos/video-1.mp4';
 
 const Register = (props) => {
   const [email, setEmail] = useState("");
@@ -43,7 +44,7 @@ const Register = (props) => {
 
   return (
     <div className="register-container">
-    <video src='assets/videos/video-1.mp4' autoPlay loop muted />
+    <video src={videoSource} autoPlay loop muted />
       <form className="form-profile" onSubmit={handleSubmit}>
           <h1>Inscrivez vous dès maintenant</h1>
           <div className="form-group">

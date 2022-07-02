@@ -1,6 +1,9 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
+import KameliaSource from "../assets/images/kamelia.jpg"
+import CheikhSource from "../assets/images/cheikh.jpg"
+import StephaneSource from "../assets/images/stephane.jpg"
 
 function Cards() {
   return (
@@ -9,21 +12,21 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul>
             <CardItem
-              src='assets/images/stephane.jpg'
+              src={StephaneSource}
               text='Data Analyste'
               label='Stephane'
             />
           </ul>
           <ul>
             <CardItem
-              src='assets/images/kamelia.jpg'
+              src={KameliaSource}
               text='Software Engieneer'
               label='Kamelia'
             />
           </ul>
           <ul>
             <CardItem
-              src='assets/images/cheikh.jpg'
+              src={CheikhSource}
               text='Data Engieneer'
               label='Cheikh'
             />

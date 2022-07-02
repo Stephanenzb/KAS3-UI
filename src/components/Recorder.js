@@ -5,6 +5,7 @@ import { LoginButton } from "./LoginButton";
 import { Button } from "./Button";
 import './Recorder.css'
 import Footer from "./Footer";
+import videoSource from "../assets/videos/video-1.mp4"
 
 
 const Recorder = () =>{
@@ -21,7 +22,6 @@ const Recorder = () =>{
     const audioPlayer = useRef(null);
 
 
-    //"http://localhost:8080/upload"
     const handleSubmit = (e) =>{
         e.preventDefault();
         let formdata = new FormData()
@@ -208,7 +208,7 @@ const Recorder = () =>{
     return(
         <>
         <div className="recorder-container">
-            <video src='assets/videos/video-1.mp4' autoPlay loop muted />
+            <video src={videoSource} autoPlay loop muted />
             <ReactMic
             record={record}
             className="sound-wave"
@@ -271,14 +271,14 @@ const Recorder = () =>{
             buttonStyle='btn--outline'
             buttonSize='btn--medium'
             onClick={getData}
-            path='TranscriptedAudio'>Galerie</Button>
+            path='/TranscriptedAudio'>Bibliothèque</Button>
             <Button
             className ='btn'
             buttonStyle='btn--outline'
             buttonSize='btn--medium'
             path="/profil">Annuler</Button>
         </div>
-        {transcripted && <p style={{'fontSize': '10px'}}>C'est tout bon, check ta gallerie !</p>}
+        {transcripted && <p style={{'fontSize': '10px'}}>C'est tout bon, check ta Bibliothèque !</p>}
         {!transcripted && <p style={{'fontSize': '10px'}}>Si ce message ne disparait pas après un enregistrement contacte nous !</p>}
         </div>
            <Footer/>

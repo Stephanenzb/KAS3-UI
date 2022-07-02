@@ -4,6 +4,7 @@ import { useSpeechRecognition } from "react-speech-recognition";
 import { LoginButton } from "./LoginButton";
 import "./Dictaphone.css"
 import Footer from "./Footer";
+import videoSource from "../assets/videos/video-1.mp4"
 
 const Dictaphone = () =>{
     const commands = [
@@ -47,7 +48,7 @@ const Dictaphone = () =>{
 
     return (
         <div>
-          <video src='assets/videos/video-1.mp4' autoPlay loop muted />
+          <video src={videoSource} autoPlay loop muted />
         <div className="dict-container">
         <span style={{"color" : "white"}} >
           listening:

@@ -3,6 +3,7 @@ import React, { useState, useEffect} from "react";
 import Footer from "./Footer";
 import { LoginButton } from "./LoginButton";
 import './TranscriptedData.css';
+import videoSource from "../assets/videos/video-1.mp4"
 
 
 
@@ -39,7 +40,7 @@ const TranscriptionData = () =>{
     return(
         <>
         <div className="data-container">
-        <video src='/assets/videos/video-1.mp4' autoPlay loop muted />
+        <video src={videoSource} autoPlay loop muted />
         <h1>Click ici pour afficher tes transcriptions </h1>
         {showButton &&
         <LoginButton
