@@ -16,9 +16,10 @@ const Recorder = () =>{
     const [url, setUrl ] = useState("");
     const [blob, setBlob] = useState(null);
     const [transcriptedText, setTranscriptedText] = useState("");
-    const [rowData, setRowData] = useState([])
-    const [submitted, setSubmitted] = useState(false)
-    const [transcripted, setTranscripted] = useState(false)
+    const [rowData, setRowData] = useState([]);
+    const [submitted, setSubmitted] = useState(false);
+    const [transcripted, setTranscripted] = useState(false);
+    const [errorTranscript, setErrorTranscript] = useState(false);
     const audioPlayer = useRef(null);
 
 
@@ -171,6 +172,8 @@ const Recorder = () =>{
                 }
             ).catch(err => {
                 console.log(err)
+                setErrorTranscript(true);
+                //setTranscripted("Oups ! Il y a une erreur dans le système, vérifie ta qualité audio, ou contacte kamkam !")
             })
           }
 
@@ -256,6 +259,7 @@ const Recorder = () =>{
             buttonSize='btn--medium'
             onClick={transcript}
             >Transcript</LoginButton>
+            {errorTranscript && <p style={{'fontSize': '10px', 'color': 'white'}}>Il y a une erreur, contact kam ou essaye encore !</p>}
             
         <div className="recorder-area">
         <textarea style={{'width' : '689px', 'height': '144px'}} placeholder={transcriptedText}></textarea>
