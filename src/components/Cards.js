@@ -13,7 +13,7 @@ function Cards() {
           <ul>
             <CardItem
               src={StephaneSource}
-              text='Data BI Engineer'
+              text='Data Engineer BI'
               label='Stephane'
             />
           </ul>
