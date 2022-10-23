@@ -27,7 +27,7 @@ const Recorder = () =>{
         e.preventDefault();
         let formdata = new FormData()
         formdata.append("audio-file", audioFile);
-        const response = axios.post("https://kasapi-dot-kas3-366408.ey.r.appspot.com/upload", formdata
+        const response = axios.post("https://kasapi-dot-kas2-365120.ey.r.appspot.com/upload", formdata
             ).then(
                 res => {
                     setUrl(res.data.url);
@@ -131,7 +131,7 @@ const Recorder = () =>{
         const id = Math.floor(Math.random() * 100)
        
         axios.post(
-            "https://kasapi-dot-kas3-366408.ey.r.appspot.com/store-transcription/bdd_kas_transcript", "bdd_kas_transcript",
+            "https://kasapi-dot-kas2-365120.ey.r.appspot.com/store-transcription/bdd_kas_transcript", "bdd_kas_transcript",
               {
                   params: {
                       title:id,
@@ -155,7 +155,7 @@ const Recorder = () =>{
 
     const transcript = () =>{
         axios.get(
-            "https://kasapi-dot-kas3-366408.ey.r.appspot.com/transcription", {
+            "https://kasapi-dot-kas2-365120.ey.r.appspot.com/transcription", {
                 params : {
                     public_url: url
                 }
@@ -184,7 +184,7 @@ const Recorder = () =>{
 
     const getData = () =>{
         return axios.get(
-            "https://kasapi-dot-kas3-366408.ey.r.appspot.com/stored_transcriptions", {
+            "https://kasapi-dot-kas2-365120.ey.r.appspot.com/stored_transcriptions", {
                 params : {
                     index_name : "bdd_kas_transcript" 
                 }
