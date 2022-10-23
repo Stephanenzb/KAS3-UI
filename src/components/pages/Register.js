@@ -64,7 +64,7 @@ const Register = (props) => {
               type="text"
               className="form-control"
               id="username"
-              placeholder="kamelia"
+              placeholder="stephane"
               style={{width:"90%", padding:"12px 30px", margin: "8px 0", boxSizing:"border-box"}}
               onChange={(e) => setUsername(e.target.value)}
             />
