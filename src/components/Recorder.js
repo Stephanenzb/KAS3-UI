@@ -27,7 +27,7 @@ const Recorder = () =>{
         e.preventDefault();
         let formdata = new FormData()
         formdata.append("audio-file", audioFile);
-        const response = axios.post("https://metal-repeater-352000.uc.r.appspot.com/upload", formdata
+        const response = axios.post("https://kasapi-dot-kas3-366408.ey.r.appspot.com/upload", formdata
             ).then(
                 res => {
                     setUrl(res.data.url);
