@@ -25,7 +25,7 @@ const Upload = () => {
         e.preventDefault();
         const data = new FormData()
         data.append("audio-file", selectedFile)
-        axios.post("https://kasapi-dot-kas2-365120.ey.r.appspot.com/upload", data,
+        axios.post("https://https://kas2-365120.ey.r.appspot.com/upload", data,
         ).then(
             res => {
                 setUrl(res.data.url);
