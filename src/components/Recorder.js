@@ -131,7 +131,7 @@ const Recorder = () =>{
         const id = Math.floor(Math.random() * 100)
        
         axios.post(
-            "https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/store-transcription/bdd_kas_transcript", "bdd_kas_transcript",
+            "https://kasapi-dot-kas3-366408.ey.r.appspot.com/store-transcription/bdd_kas_transcript", "bdd_kas_transcript",
               {
                   params: {
                       title:id,
@@ -155,7 +155,7 @@ const Recorder = () =>{
 
     const transcript = () =>{
         axios.get(
-            "https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/transcription", {
+            "https://kasapi-dot-kas3-366408.ey.r.appspot.com/transcription", {
                 params : {
                     public_url: url
                 }
@@ -173,7 +173,7 @@ const Recorder = () =>{
             ).catch(err => {
                 console.log(err)
                 setErrorTranscript(true);
-                //setTranscripted("Oups ! Il y a une erreur dans le système, vérifie ta qualité audio, ou contacte kamkam !")
+                //setTranscripted("Oups ! Il y a une erreur dans le système, vérifie ta qualité audio, ou contacte Stéph !")
             })
           }
 
@@ -184,7 +184,7 @@ const Recorder = () =>{
 
     const getData = () =>{
         return axios.get(
-            "https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/stored_transcriptions", {
+            "https://kasapi-dot-kas3-366408.ey.r.appspot.com/stored_transcriptions", {
                 params : {
                     index_name : "bdd_kas_transcript" 
                 }
