@@ -14,7 +14,7 @@ const TranscriptionData = () =>{
 
     const getData = () =>{
         return axios.get(
-            "https://kasapi-dot-kas3-366408.ey.r.appspot.com/stored_transcriptions", {
+            "https://kasapi-dot-kas2-365120.ey.r.appspot.com/stored_transcriptions", {
                 params : {
                     index_name : "bdd_kas_transcript" 
                 }
