@@ -17,7 +17,7 @@ const Register = (props) => {
 
   const handleSubmit =  (e) =>{
     e.preventDefault();
-      axios.post("https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/create-user/database_users/", "database_users",
+      axios.post("https://kasapi-dot-kas2-365120.ey.r.appspot.com/create-user/database_users/", "database_users",
       {
         params: {
           email : email,
