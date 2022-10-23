@@ -25,7 +25,7 @@ const Upload = () => {
         e.preventDefault();
         const data = new FormData()
         data.append("audio-file", selectedFile)
-        axios.post("https://metal-repeater-352000.uc.r.appspot.com/upload", data,
+        axios.post("https://kasapi-dot-kas3-366408.ey.r.appspot.com/upload", data,
         ).then(
             res => {
                 setUrl(res.data.url);
@@ -41,7 +41,7 @@ const Upload = () => {
 
     const transcript = () =>{
         axios.get(
-            "https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/transcription-upload", {
+            "https://kasapi-dot-kas3-366408.ey.r.appspot.com/transcription-upload", {
                 params : {
                     public_url: url
                 }
@@ -66,7 +66,7 @@ const Upload = () => {
         const id = Math.floor(Math.random() * 100)
        
         axios.post(
-            "https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/store-transcription/bdd_kas_transcript", "bdd_kas_transcript",
+            "https://kasapi-dot-kas3-366408.ey.r.appspot.com/store-transcription/bdd_kas_transcript", "bdd_kas_transcript",
               {
                   params: {
                       title:id,
@@ -89,7 +89,7 @@ const Upload = () => {
 
     const getData = () =>{
         return axios.get(
-            "https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/stored_transcriptions", {
+            "https://kasapi-dot-kas3-366408.ey.r.appspot.com/stored_transcriptions", {
                 params : {
                     index_name : "bdd_kas_transcript" 
                 }
@@ -114,8 +114,8 @@ const Upload = () => {
             <input type="file" onChange={handelSelectedFile}></input>
             {submitted && <p style={{'fontSize': '10px', 'color': 'white'}} >Très bien passe à la suite :) </p>}
             {transcripted && <p style={{'fontSize': '10px', 'color': 'white'}}>C'est tout bon, check ta Bibliothèque !</p>}
-            {errorTranscript && <p style={{'fontSize': '10px', 'color': 'white'}}>Il y a une erreur, contact kam ou essaye encore !</p>}
-            {errorSubmit && <p style={{'fontSize': '10px', 'color': 'white'}}> Il y a une erreur, contact kam ou essaye encore !</p>}
+            {errorTranscript && <p style={{'fontSize': '10px', 'color': 'white'}}>Il y a une erreur, contact Stéph ou essaye encore !</p>}
+            {errorSubmit && <p style={{'fontSize': '10px', 'color': 'white'}}> Il y a une erreur, contact Stéph ou essaye encore !</p>}
             <div className="hero-btns">    
             <Button className='btns'
             buttonStyle='btn--outline'
