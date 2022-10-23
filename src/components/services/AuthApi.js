@@ -14,7 +14,7 @@ export function hasAuthenticated(){
 }
 
 export async function login(email, username, password){
-    return axios.get ("https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/check-connexion",
+    return axios.get ("https://kasapi-dot-kas2-365120.ey.r.appspot.com/check-connexion",
     {
         params:{
             email : email, 
