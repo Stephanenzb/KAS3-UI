@@ -17,7 +17,7 @@ const Register = (props) => {
 
   const handleSubmit =  (e) =>{
     e.preventDefault();
-      axios.post("https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/create-user/database_users/", "databse_users",
+      axios.post("https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/create-user/database_users/", "database_users",
       {
         params: {
           email : email,
@@ -94,7 +94,7 @@ const Register = (props) => {
             Annuler
           </Button>
           </div>
-          {alert && <p style={{"color" : "white"}}> Oups ! une erreur s'est produite ! Essaye encore ou appelle kam !</p>}
+          {alert && <p style={{"color" : "white"}}> Oups ! une erreur s'est produite ! Essaye encore ou appelle Stéphane !</p>}
       </form>
       <Footer/>
     </div>

@@ -52,7 +52,7 @@ const Login = ({ history }) => {
               name="email"
               className="form-control"
               id="email"
-              placeholder="Kamelia@gmail.com"
+              placeholder="Stephane@gmail.com"
               onChange={(e) => setEmail(e.target.value)}
               style={{width:"90%", padding:"12px 60px", margin: "8px 0", boxSizing:"border-box"}}
             />
@@ -64,7 +64,7 @@ const Login = ({ history }) => {
               name="username"
               className="form-control"
               id="username"
-              placeholder="Kamelia"
+              placeholder="Stephane"
               onChange={(e) => setUsername(e.target.value)}
               style={{width:"90%", padding:"12px 60px", margin: "8px 0", boxSizing:"border-box"}}
             />
@@ -93,7 +93,7 @@ const Login = ({ history }) => {
             Annuler
           </Button>
           </div>
-          {alert && <p style={{"color" : "white"}}>Oups ! Une erreur s'est produite, essaye encore ou appelle Kam !</p>}
+          {alert && <p style={{"color" : "white"}}>Oups ! Une erreur s'est produite, essaye encore ou appelle Stéphane !</p>}
       </form>
       <Footer/>
     </div>
