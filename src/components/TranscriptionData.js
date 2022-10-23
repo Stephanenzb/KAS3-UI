@@ -14,7 +14,7 @@ const TranscriptionData = () =>{
 
     const getData = () =>{
         return axios.get(
-            "https://kasapi-dot-metal-repeater-352000.uc.r.appspot.com/stored_transcriptions", {
+            "https://https://kasapi-dot-kas3-366408.ey.r.appspot.com/stored_transcriptions", {
                 params : {
                     index_name : "bdd_kas_transcript" 
                 }
