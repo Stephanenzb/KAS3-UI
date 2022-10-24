@@ -66,7 +66,7 @@ const Upload = () => {
         const id = Math.floor(Math.random() * 100)
        
         axios.post(
-            "https://kasapi-dot-kas2-365120.ey.r.appspot.com/bdd_kas_transcript", "bdd_kas_transcript",
+            "https://kasapi-dot-kas2-365120.ey.r.appspot.com/store-transcription/bdd_kas_transcript", "bdd_kas_transcript",
               {
                   params: {
                       title:id,
