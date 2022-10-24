@@ -122,18 +122,6 @@ const Upload = () => {
             buttonSize='btn--large'
             onClick={handleUpload}
             >Upload</Button>
-            <Button className='btns'
-            buttonStyle='btn--outline'
-            buttonSize='btn--large'
-            onClick={transcript}>
-              Transcript
-            </Button>
-            <Button className='btns'
-                        buttonStyle='btn--outline'
-                        buttonSize='btn--large'
-                        onClick={transcript}>
-                          Predict Model
-                        </Button>
             </div>
             <div className="recorder-area">
             <textarea style={{'width' : '689px', 'height': '144px'}} placeholder={transcriptedText}></textarea>
