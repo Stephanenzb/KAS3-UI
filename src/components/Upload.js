@@ -139,14 +139,6 @@ const Upload = () => {
             <textarea style={{'width' : '689px', 'height': '144px'}} placeholder={transcriptedText}></textarea>
             <div className="hero-btns"> 
             <Button
-                className ='btn'
-                buttonStyle='btn--outline'
-                buttonSize='btn--medium'
-                onClick={storeTranscript}
-            >
-              Enregistrer  
-            </Button>
-            <Button
             className ='btn'
             buttonStyle='btn--outline'
             buttonSize='btn--medium'
