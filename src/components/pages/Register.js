@@ -64,7 +64,7 @@ const Register = (props) => {
               type="text"
               className="form-control"
               id="username"
-              placeholder="stephane"
+              placeholder="kamelia"
               style={{width:"90%", padding:"12px 30px", margin: "8px 0", boxSizing:"border-box"}}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -94,7 +94,7 @@ const Register = (props) => {
             Annuler
           </Button>
           </div>
-          {alert && <p style={{"color" : "white"}}> Oups ! une erreur s'est produite ! Essaye encore ou appelle Stéphane !</p>}
+          {alert && <p style={{"color" : "white"}}> Oups ! une erreur s'est produite ! Essaye encore ou appelle Stéph !</p>}
       </form>
       <Footer/>
     </div>
