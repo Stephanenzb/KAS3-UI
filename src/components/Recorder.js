@@ -45,7 +45,7 @@ const Recorder = () =>{
           preview: URL.createObjectURL(e.target.files[0]),
           data: e.target.files[0],
         };
-        const newUrl = 'gs://kas-audio/' + audio.name
+        const newUrl = 'gs:/kas-audio/' + audio.name
         setAudioFile(audio);
         setUrl(newUrl)
 
