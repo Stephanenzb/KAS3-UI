@@ -122,10 +122,24 @@ const Upload = () => {
             buttonSize='btn--large'
             onClick={handleUpload}
             >Upload</Button>
+            <Button className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+            onClick={transcript}>
+              Transcript
+            </Button>
             </div>
             <div className="recorder-area">
             <textarea style={{'width' : '689px', 'height': '144px'}} placeholder={transcriptedText}></textarea>
             <div className="hero-btns"> 
+            <Button
+                className ='btn'
+                buttonStyle='btn--outline'
+                buttonSize='btn--medium'
+                onClick={storeTranscript}
+            >
+              Enregistrer  
+            </Button>
             <Button
             className ='btn'
             buttonStyle='btn--outline'
